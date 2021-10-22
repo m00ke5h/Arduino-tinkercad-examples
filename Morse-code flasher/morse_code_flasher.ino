@@ -11,14 +11,14 @@ char* numbers[] = {"-----", ".----", "..---", "...--", "....-", ".....", "-...."
 
 int dotDelay = 200;
 
-void setup()
-{
+
+void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
 }
 
-void loop()
-{
+
+void loop() {
 char ch;
 if (Serial.available())
   {
@@ -42,8 +42,8 @@ if (Serial.available())
   }
 }
 
-void flashSequence(char* sequence)
-{
+
+void flashSequence(char* sequence) {
   int i = 0;
   while (sequence[i] != NULL)
   {
@@ -53,8 +53,8 @@ void flashSequence(char* sequence)
   delay(dotDelay * 3); // gap between letters
 }
 
-void flashDotOrDash(char dotOrDash)
-{
+
+void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, HIGH);
   if (dotOrDash == '.')
   {
