@@ -15,10 +15,12 @@ int hour=8;
 int min=0;
 int sec=0;
 
+
 void setup() {
   Serial.begin(9600);
   lcd.begin (16, 2);
 }
+
 
 void loop() {
   int reading = digitalRead(sensorPin);
@@ -68,7 +70,8 @@ void loop() {
   delay(3000);
 }
 
-void print_time(){
+
+void print_time() {
  if(sec==60){
     min+=1;
     sec=0;
