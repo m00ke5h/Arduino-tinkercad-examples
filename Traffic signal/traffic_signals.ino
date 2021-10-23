@@ -5,16 +5,16 @@ int buttonPin = 5;
 
 int state = 0;
 
-void setup()
-{
+
+void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(yellowPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(buttonPin, INPUT);
 }
 
-void loop()
-{
+
+void loop() {
   if (digitalRead(buttonPin))
   {
     if (state == 0)
@@ -41,8 +41,8 @@ void loop()
   }
 }
 
-void setLights(int red, int yellow, int green)
-{
+
+void setLights(int red, int yellow, int green) {
   digitalWrite(redPin, red);
   digitalWrite(yellowPin, yellow);
   digitalWrite(greenPin, green);
